@@ -4,32 +4,51 @@
 <head>
 	<meta charset="utf-8" />
 	<title>HTML Lesson 1</title>
-	<link rel="icon" href="bmw_color.png"> 
+	<link rel="icon" href="bmw_color.png">
 	<style>
-		h2, h4, h6
+		h2, h4, h6 
 		{
-			text-align:center;
-			color:brown;
-			font-family:'Segoe UI';
+			text-align: center;
+			color: brown;
+			font-family: 'Segoe UI';
 		}
-		h4
+
+		.photo-container 
 		{
-			color:darkgreen;
+			background-image: image('BMWm5e39.png');
+			background-size: cover;
+			background-position: center;
+		}
+
+		body 
+		{
+			font-family: Rockwell, Arial, sans-serif;
+			font-size: 150%;
+			color: black;
+			margin: 0;
+		}
+
+		img 
+		{
+			/*background:center;*/
+			width: 100%;
+			height: auto;
 		}
 	</style>
 </head>
 <body>
-	<details>
+	<details class="photo-container">
 		<summary>Типы заголовков</summary>
-		<h1>Заголовок 1 </h1>
-		<p>Заголовок первого уровня может быть только один на странице!!!!</p>
-		<h2>Заголовок 2</h2>
-		<h3>Заголовок 3</h3>
-		<h4>Заголовок 4</h4>
-		<h5>Заголовок 5</h5>
-		<h6>Заголовок 6</h6>
-		<p>Текст</p>
+			<h1>Заголовок 1 </h1>
+			<p>Заголовок первого уровня может быть только один на странице!!!!</p>
+			<h2>Заголовок 2</h2>
+			<h3>Заголовок 3</h3>
+			<h4>Заголовок 4</h4>
+			<h5>Заголовок 5</h5>
+			<h6>Заголовок 6</h6>
+			<p>Текст</p>
 	</details>
+
 
 	<details>
 		<summary>Дескрипторы</summary>
@@ -47,7 +66,7 @@
 Кроме того, <b>предформатированный</b> текст всегда отображается <b>моноширным</b> шрифтом;
 </pre> <br>
 		<hr>
-		<h2>Дескрипторы логического форматирования</h2 align="center">
+		<h2>Дескрипторы логического форматирования</h2>
 
 		Для наиболее эффективного анализа нашей страницы поисковыми машинами
 		вместо дескрипторов физического форматирования
@@ -62,11 +81,8 @@
 	</details>
 
 	<h2>CSS - Cascade Style Sheet</h2>
-	Предназначены для оформления внешнего вида страницы
-	В то время, как HTML разметка создаёт структуру страницы и наполняет её содержимым CSS стили оформляют эту структуру и придают ей внешний вид.
-	СSS стили можно применять непосредственно к отдельным дискрипторам при помощи атрибута 'style', такие стили называют локальными.
-	Но вся мощь CSS заключаются в том, что стили могут применяться хоть к тысяче страниц, для этого их выносят в отдельный файл.
-	Хотя, если сайт представляет собой одну страницу, то стили можно описать в заголовке.
+
+	<!--<img src="BMWm5e60.png" alt="BMW m5 e60"/>-->
 
 </body>
 </html>
