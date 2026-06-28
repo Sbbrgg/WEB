@@ -1,21 +1,46 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-body
-{
-	font-family:'Roboto Condensed', 'Segoe UI';
-	/*font-size:160%;*/
-	font-size:20px;
+
+body {
+	font-family: 'Roboto Condensed', 'Segoe UI';
+	/*font-size: 160%;*/
+	font-size: 20px;
+	padding: 1% 5%;
 }
-p
-{
-	text-align:justify;
+
+p {
+	text-align: justify;
+	text-indent: 48px;
 }
-figure
-{
-	text-align:center;
-	font-style:italic;
-	font-weight:100;
+
+	p::first-letter {
+		font-size:32px;
+		font-family:'Segoe Print';
+	}
+
+figure {
+	text-align: center;
+	font-style: italic;
+	font-weight: 100;
 }
-ul
-{
-	list-style:none;
+
+ul {
+	list-style: none;
 }
+
+a {
+	text-decoration: none;
+}
+
+	a:active {
+		color: green;
+	}
+
+	a:visited {
+		color: darkgreen;
+	}
+
+	a:hover {
+		font-weight: 800;
+		background-color: black;
+		color: white;
+	}
