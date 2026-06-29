@@ -12,7 +12,7 @@ body {
 	padding: 1% 1%;
 	background-color: whitesmoke;
 }
-:target {
+:target/* > span*/{
 	animation: highlight 1.5s ease forwards;
 	border-radius: 4px;
 }
@@ -52,8 +52,6 @@ a {
 		font-weight: 800;
 		color: black;
 	}
-
-
 
 @keyframes highlight {
 	0% {
