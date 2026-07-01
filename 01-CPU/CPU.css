@@ -2,6 +2,11 @@
 
 html {
 	background-color: azure;
+	background-color: whitesmoke;
+	background-image: url(img/pcb.jpg);
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
 }
 
 body {
@@ -10,12 +15,25 @@ body {
 	margin: 1% 20%;
 	font-size: 20px;
 	padding: 1% 1%;
-	background-color: whitesmoke;
+	background-color:azure;
+	
 }
-:target/* > span*/{
+
+:target /* > span*/ {
 	animation: highlight 1.5s ease forwards;
 	border-radius: 4px;
 }
+
+	:target + div {
+		/*background-color:bisque;*/
+		border-radius: 5px;
+		box-shadow: 0 0 25px 25px rgba(220, 220, 220, .7);
+	}
+
+div {
+	padding: 16px;
+}
+
 p {
 	text-align: justify;
 	text-indent: 48px;
