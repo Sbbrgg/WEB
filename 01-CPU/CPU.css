@@ -5,8 +5,8 @@ html {
 	background-color: whitesmoke;
 	background-image: url(img/pcb.jpg);
 	background-repeat: no-repeat;
-	background-attachment:fixed;
-	background-size:cover;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 body {
@@ -15,8 +15,7 @@ body {
 	margin: 1% 20%;
 	font-size: 20px;
 	padding: 1% 1%;
-	background-color:rgb(211, 202, 202);
-	
+	background-color: rgb(211, 202, 202);
 }
 
 :target /* > span*/ {
@@ -70,6 +69,21 @@ a {
 		font-weight: 800;
 		color: black;
 	}
+
+.cite {
+	/*border: solid 1px;*/
+	border-left: solid 5px blue;
+	margin: 50px 100px 100px 100px;
+	/*margin: all-sides*/
+	/*margin: top-bottom left-right*/
+	/*margin: top left-right bottom*/
+	/*margin: top right bottom left*/
+	padding: 0px 10px 0px;
+	/*padding: all-sides*/
+	/*padding: top-bottom left-right*/
+	/*padding: top left-right bottom*/
+	/*padding: top right bottom left*/
+}
 
 @keyframes highlight {
 	0% {
