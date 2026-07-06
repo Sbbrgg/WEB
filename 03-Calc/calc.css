@@ -1,0 +1,48 @@
+﻿body {
+	background-image: url("img/Background/scriptonit1280.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	/*background-size: 100%;*/
+	/*background-repeat:no-repeat;*/
+}
+
+.main-window {
+	width: 400px;
+	height: 300px;
+}
+
+.title-bar {
+	width: 100%;
+	height: 38px;
+	background-color: cornflowerblue;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.title-bar-left-side {
+	display: flex;
+	align-items: center;
+}
+/*
+	justify:content - по ширине
+	allign-items	- по высоте
+*/
+
+.app-icon {
+	width: 24px;
+	height: 24px;
+}
+
+.control-button {
+	width: 30%;
+	height: 30%;
+}
+
+.title-bar-left-side .title-bar-right.side {
+	margin: 0px 8px 0px 8px;
+}
