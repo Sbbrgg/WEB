@@ -8,21 +8,60 @@
     <title>Калькулятор</title>
 </head>
 <body>
-	<div class="main-window">
-		<div class="title-bar">
-			<div class="title-bar-left-side">
-				<img src="img/calc-ico/calc1.ico" alt="Calc ico" class="app-icon" />
-				<div>&#8211; Калькулятор</div>
-			</div>
-			<div class="title-bar-right-side">
-				<button class="control-button">&#x1F5D5;</button>
-				<button class="control-button" disabled>&#128470;</button>
-				<button class="control-button">&#10006;</button>
-			</div>
+    <div class="main-window">
+        <div class="title-bar">
+            <div class="title-bar-left-side">
+                <img src="img/calc-ico/calc1.ico" alt="Calc ico" class="app-icon" />
+                <div>&#8211; Калькулятор</div>
+            </div>
+            <div class="title-bar-right-side">
+                <button class="control-button">&#x1F5D5;</button>
+                <button class="control-button" disabled>&#128470;</button>
+                <button class="control-button">&#10006;</button>
+            </div>
         </div>
         <!-- -------------------------------------------------------------------------- -->
-		<div class="client-rect">
-            
+        <div class="client-rect">
+            <div class="display" id="display">0</div>
+
+            <div class="btn-grid">
+                <div class="btn-rows btn-first-row">
+                    <button class="btn btn-operator">C</button>
+                    <button class="btn btn-operator">backspace</button>
+                    <button class="btn btn-operator">%</button>
+                    <button class="btn btn-operator">/</button>
+                </div>
+
+                <div class="btn-rows btn-second-row">
+                    <button class="btn-digit">7</button>
+                    <button class="btn-digit">8</button>
+                    <button class="btn-digit">9</button>
+                    <button class="btn-operator">*</button>
+                </div>
+
+                <div class="btn-rows btn-third-row">
+                    <button class="btn-digit">4</button>
+                    <button class="btn-digit">5</button>
+                    <button class="btn-digit">6</button>
+                    <button class="btn-operator">-</button>
+                </div>
+
+                <div class="btn-rows btn-fourth-row">
+                    <button class="btn-digit">1</button>
+                    <button class="btn-digit">2</button>
+                    <button class="btn-digit">3</button>
+                    <button class="btn-operator">+</button>
+                </div>
+
+                <div class="btn-rows btn-fifth-row">
+                    <button class="btn-digit">0</button>
+                    <button class="btn-digit">.</button>
+                </div>
+
+                <div class="btn-rows btn-sixth-row">
+                    <button class="btn-operator">=</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
