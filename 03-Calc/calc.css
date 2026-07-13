@@ -1,11 +1,9 @@
-﻿body {
-	background-image: url("img/Background/scriptonit1280.jpg");
+﻿﻿body {
+	background-image: url("img/Background/bliss-upscale-4500.jpg");
 	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	/*background-size: 100%;*/
-	/*background-repeat:no-repeat;*/
+	background-position: center center;		/* Центрируем изображение */
+	background-repeat: no-repeat;			/* Не повторяем */
+	background-attachment: fixed;			/* Фиксируем при прокрутке */
 	font-family: Tahoma;
 }
 
@@ -19,26 +17,36 @@
 	height: 38px;
 	color: white;
 	text-shadow: 1px 1px 2px black;
-	background-image: linear-gradient( rgb(14, 77, 109), rgb(42, 138, 251), rgb(0, 86, 228), rgb(0, 86, 228), rgb(0, 86, 228), rgb(0, 86, 228), rgb(4, 85, 253), rgb(4, 85, 253), rgb(4, 85, 253), rgb(13, 48, 141));
+	background-image: linear-gradient( 
+		rgb(14, 77, 190), 
+		rgb(42, 138, 251), 
+		rgb(0, 86,228), 
+		rgb(0, 86,228), 
+		rgb(0, 86,228), 
+		rgb(0, 86,228),
+		/*rgb(0, 86,228),*/
+		rgb(4, 85, 253), 
+		rgb(4, 85, 253), 
+		rgb(4, 85, 253), 
+		rgb(13, 48, 141) );
+	box-shadow: inset 0px 0px 4px 1px rgb(22, 72, 183);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
 }
 
 .title-bar-left-side {
 	display: flex;
 	align-items: center;
 }
-	/*
-	justify:content - по ширине
-	allign-items	- по высоте
-*/
 
-	.title-bar-left-side .title-bar-right.side {
-		margin: 0px 8px;
-	}
+.title-bar-left-side, .title-bar-right-side {
+	margin: 0px 8px;
+	display: flex;
+	align-items: center;
+}
 
 .app-icon {
 	width: 24px;
@@ -46,17 +54,63 @@
 }
 
 .control-button {
-	width: 24px;
-	height: 24px;
-	align-content: center;
+	width: 28px;
+	height: 28px;
 	font-weight: 800;
+	font-size: 15px;
+	margin: 0px 1px;
+	padding: 0px 1px 8px 1px;
+	position: relative;
 	border: solid 1px white;
 	border-radius: 4px;
-	background-image: linear-gradient(to bottom right, #55A1FF, #0025B5);
-	/*background-color: rgb(45, 109 249);*/
-	box-shadow: inset 2px 1px 2px 0px rgb(120, 161, 254);
+	color: white;
+	/*background-image: linear-gradient(to bottom right, #55A1FF, #0025B5);
+	box-shadow: inset 1px 1px 1px 0px #77A1F5;*/
+	background-color: rgb(45, 109, 249);
+	box-shadow: inset -1px -2px 4px 0px #000088, inset 4px 2px 4px 0px #7788FF;
+}
+
+	.control-button:hover {
+		background-image: linear-gradient( to bottom right, rgb(149, 149, 249), rgb(45, 109, 249), rgb(149, 149, 249) );
+	}
+
+	.control-button:active {
+		background-image: none;
+		background-color: rgb(85, 85, 192);
+		box-shadow: inset 4px 2px 4px 0px #000088, inset -4px -2px 4px 0px #7788FF;
+	}
+
+.control-button-signature {
+	font-size: 20px;
+	font-family: 'Courier New';
+	margin: -4px 0px 0px 0px;
+}
+
+.close-button-signature {
+	font-size: 20px;
+	font-family: 'Courier New';
+	margin: -2px 0px 0px 0px;
 }
 
 .close-button {
 	background-color: rgb(221, 85, 26);
+	box-shadow: inset -1px -1px 4px 0px #880000, inset 4px 2px 4px 0px #FF8888;
+}
+
+	.close-button:hover {
+		background-image: linear-gradient( to bottom right, rgb(249, 149, 149), rgb(249, 85, 26), rgb(249, 128, 85) );
+	}
+
+	.close-button:active {
+		box-shadow: inset 4px 2px 4px 0px #880000, inset -2px -1px 4px 0px #FF8888;
+		background-image: linear-gradient( to bottom right, rgb(224, 49, 49), rgb(224, 85, 26), rgb(224, 64, 85) );
+	}
+
+
+.control-button[disabled], .control-button[disabled]:hover, .control-button[disabled]:active {
+	color: #CCCCCC;
+	border-color: #CCCCCC;
+	background-image: none;
+	background-color: rgb(45, 109, 249);
+	box-shadow: inset -1px -2px 4px 0px #000088, inset 4px 2px 4px 0px #7788FF;
 }
