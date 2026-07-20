@@ -1,0 +1,26 @@
+﻿input, div, button {
+	font-size: 24px;
+	width: 50%;
+}
+
+input {
+	text-align: right;
+}
+
+.task {
+	width: 100%;
+	display: flex;
+	align-content: center;
+}
+
+.result {
+	width: 50%;
+}
+
+.pair {
+	text-align: right;
+}
+
+#factorial-result {
+
+}
