@@ -1,91 +1,15 @@
-﻿﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8" />
-	<title>Introduction to JavaScript</title>
-	<style>
-		code {
-			color: blue;
-			font-family: 'Courier New';
-			font-weight: 900;
-		}
-	</style>
+    <meta charset="utf-8" />
+    <title></title>
 </head>
 <body>
-	<details>
-		<summary>Введение</summary>
-		<h1>Introduction to JavaScript</h1>
-		<p>
-			<strong>JavaScript</strong> &#8213; это интерпретируемый язык программирования общего назначения с динамической типизацией данных.
-		</p>
-		<p>
-			<strong>Интерпретируемый</strong> значит что программа выполняется в исходном виде, т.е., исходный код не преобразуется в машинный или промежуточный код. В связи с этим ошибок на этапе компиляции и компоновки отсутствут, есть только ошибки на этапе выполнения.
-			FrontEnd
-		</p>
-		<p>
-			<strong>Диамическая типипзация</strong> говорит о том, что тип переменных и констант определяется во время присваивания, по типу значения справа (r-value).
-			l-value = r-value;
-		</p>
-	</details>
-	<details>
-		<summary>Переменные и типы данных</summary>
-		<h2>Переменные и константы</h2>
-		<dl>
-			<dt><code style="color:blue;">var</code></dt>
-			<dd>объявляет глобальную переменную, несмотря на область видимости, в которой она объявлена. Если записать значение в несуществующую переменную, то это не вызовет ошибку, это будет аналогично ключевому слову '<code>var</code>';</dd>
-			<dt><code style="color:blue;">let</code></dt>
-			<dd>объявляет локальную переменную, только для той области видимости, в которой она используется;</dd>
-			<dt><code style="color:blue;">const</code></dt>
-			<dd>объявляет константу. Константы могут быть только локальными;</dd>
-		</dl>
-		<h2>Типы данных:</h2>
-		<ol>
-			<li>
-				Примитивные типы:
-				<ul>
-					<li><code>Boolean</code> &#8213; принимает одно из двух значений <code>True</code>либо <code>False</code>. Значения: 0, null, '', "", `` неявно преобразуются в <code>False</code>. <code>True</code> &#8213; это любое значение, отличное от нуля или пустой строки.</li>
-					<li><code>String</code> &#8213; объект, описывающий массив символов;</li>
-					<li><code>Number</code> &#8213; вещественное (дробное число), которое является полным аналогом типа <code>double</code>. Все числовые литералы неявно преобразубтся в Number;</li>
-					<li><code>Bigint</code> &#8213; целое число неграниченных размеров;</li>
-				</ul>
-			</li>
-			<li>
-				Объекты:
-				<ul>
-					<li><code>Object</code> &#8213; </li>
-					<li><code>Array</code> &#8213; </li>
-					<li><code>Function</code> &#8213; </li>
-					<li><code>Date</code> &#8213; </li>
-					<li><code>Map</code> &#8213; </li>
-					<li><code>Set</code> &#8213; </li>
-					<li><code>RegExp</code> &#8213; регулярное выражение; </li>
-				</ul>
-			</li>
-		</ol>
-	</details>
-	<script>
-		//alert("Hello");
-		//var name = prompt("Введите Ваше имя: ");
-		//alert(name);
-		//alert('Привет ' + prompt("Введите Ваше имя: ") + ' we are glad to see you');
-		//alert(`Привет ${prompt("Введите Ваше имя: ")}.\n Это интерполяция строк.`);
-		console.log("Информацию так же можно выводить в консоль");
-		document.write("<h2>Вывод на экран</h2>");
-		{
-			var1 = "Global variable";
-			//var1 = "Глобальная переменная";
-		}
-		document.write(var1);
-		document.writeln(5);
-		document.writeln(typeof (5));
-		let variable = Number("5");
-		document.write(typeof (variable));
-		//alert(5);
-		document.write("<hr>");
-		let a = '5' + 3;
-		document.write(a);
-	</script>
+	<h1>JavaScript</h1>
+	<ol>
+		<li><a href="intro.html">Введение</a></li>
+		<li><a href="forms_and_events.html">Формы и события</a></li>
+	</ol>
 </body>
 </html>
