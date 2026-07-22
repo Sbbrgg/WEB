@@ -7,5 +7,6 @@ function Factorial() {
 	for (let i = 1n; i <= number; i++) {
 		f *= i;
 	}
+	//resultElement.value = `${number}! = ${f}`;
 	resultElement.innerHTML = `${number}! = ${f}`;
 }

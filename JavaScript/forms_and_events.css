@@ -1,4 +1,4 @@
-﻿input, div, button {
+﻿﻿input, div, button {
 	font-size: 24px;
 	width: 50%;
 }
@@ -10,17 +10,29 @@ input {
 .task {
 	width: 100%;
 	display: flex;
-	align-content: center;
+	align-items: center;
 }
 
 .result {
-	width: 50%;
+	max-width: 50%;
 }
 
 .pair {
 	text-align: right;
 }
 
-#factorial-result {
+label {
+	width: 50%;
+}
 
+#factorial-result {
+	overflow: auto;
+	width: 100%;
+	height: 400px;
+
+	border:solid 1px;
+	word-break: break-all;
+	/*
+		https://thecode.media/white-space-v-css/?ysclid=mrw801kff5712002260 
+	*/
 }
