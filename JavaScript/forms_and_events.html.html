@@ -9,20 +9,43 @@
 </head>
 <body>
 	<h1>Формы и события</h1>
-	<h2>Factorial</h2>
-	<div class="task">
-		<!--<div class="pair">
-		</div>-->
-		<label for="number">Введите целое число от 0 до 170:</label>
-		<input id="number" type="number" min="0" onchange="Factorial()">
-		<button onclick="Factorial()">Вычислить</button>
+	<details>
+		<h2>Factorial</h2>
+		<div class="task">
+			<!--<div class="pair">
+			</div>-->
+			<label for="number">Введите целое число от 0 до 170:</label>
+			<input id="number" type="number" min="0" onchange="Factorial()">
+			<button onclick="Factorial()">Вычислить</button>
+		</div>
+		<div id="factorial-result" class="result"></div>
+		<!--<input id="factorial-result" class="result" type="text">-->
+		<hr>
+		<h2>Power</h2>
+		<div class="task">
+		</div>
+	</details>
+
+	<div class="images-and-colors">
+		<div class="upload-image">
+			<div class="image-container">
+				<img alt="Фото студента" id="image" />
+			</div>
+			<input type="file" id="image-file" onchange="setImage()" />
+		</div>
+
+		<div class="colors">
+			<div class="select-color">
+				<label for="background-color">Цвет фона</label>
+				<input type="color" id="background-color" value="white" oninput="setBackgroundColor()"/>
+			</div>
+			<div class="select-color">
+				<label for="foreground-color">Цвет текста</label>
+				<input type="color" id="foreground-color" oninput="setForegroundColor()" />
+			</div>
+		</div>
 	</div>
-	<div id="factorial-result" class="result"></div>
-	<!--<input id="factorial-result" class="result" type="text">-->
-	<hr>
-	<h2>Power</h2>
-	<div class="task">
-	</div>
+
 	<script src="forms_and_events.js"></script>
 </body>
 </html>

@@ -36,3 +36,25 @@ label {
 		https://thecode.media/white-space-v-css/?ysclid=mrw801kff5712002260 
 	*/
 }
+
+.images-and-colors{
+	width:100%;
+	display:flex;
+	justify-content:space-between;
+}
+
+.image-container{
+	border: solid 1px;
+}
+
+#image, .image-container{
+	width: 400px;
+	height: 300px;
+}
+
+.select-color{
+	display:flex;
+	justify-content:space-between;
+
+	margin:12px;
+}
