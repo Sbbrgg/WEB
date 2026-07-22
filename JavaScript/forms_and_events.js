@@ -22,12 +22,20 @@ function setImage()
 	reader.readAsDataURL(filename.files[0]);
 }
 
-function setBackgroundColor(e)
+//function setBackgroundColor(e)
+//{
+//	document.body.style.backgroundColor = e.target.value;
+//	//document.body.style.backgroundColor = document.getElementById("background-color").value;
+//}
+//function setForegroundColor()
+//{
+//	document.body.style.color = document.getElementById("foreground-color").value;
+//}
+function setColor(event)
 {
-	document.body.style.backgroundColor = e.target.value;
-	//document.body.style.backgroundColor = document.getElementById("background-color").value;
-}
-function setForegroundColor()
-{
-	document.body.style.color = document.getElementById("foreground-color").value;
+	if (event.target.id === 'background-color') {
+		document.body.style.backgroundColor = event.target.value;
+	}
+	else
+		document.body.style.color = event.target.value;
 }
