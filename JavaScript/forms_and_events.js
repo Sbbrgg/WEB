@@ -1,4 +1,4 @@
-// JavaScript source code
+﻿// JavaScript source code
 function Factorial() {
 	let numberElement = document.getElementById("number");
 	let number = numberElement.value;
@@ -33,9 +33,10 @@ function setImage()
 //}
 function setColor(event)
 {
-	if (event.target.id === 'background-color') {
-		document.body.style.backgroundColor = event.target.value;
-	}
-	else
-		document.body.style.color = event.target.value;
+	//if (event.target.id === 'background-color') {
+	//	document.body.style.backgroundColor = event.target.value;
+	//}
+	//else
+	//	document.body.style.color = event.target.value;		
+	document.body.style[(event.target.id === 'background-color' ? 'background-color' : 'color')] = event.target.value
 }
