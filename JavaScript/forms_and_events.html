@@ -7,17 +7,22 @@
 	<link rel="stylesheet" href="forms_and_events.css">
 	<title>Формы и события</title>
 </head>
-<body>
+<!--<body onmousemove="traceMouse(event)">-->
+<body class="light">
 
 	<div class="header">
 		<div>Header</div>
 		<div id="mouse"></div>
 		<div id="debug-background"></div>
-		<img src="moon.png" id="switch-background"/>
+		<!--<img src="moon.png" id="switch-background">-->
+		<div id="switch-background"></div>
 	</div>
-
+	<hr>
+	<!-- ---------------------------------------------------------------- -->
 	<h1>Формы и события</h1>
+
 	<details>
+		<summary>Простейшие задачи</summary>
 		<h2>Factorial</h2>
 		<div class="task">
 			<!--<div class="pair">
@@ -34,26 +39,28 @@
 		</div>
 	</details>
 
+	<!-- ---------------------------------------------------------------- -->
+
 	<div class="images-and-colors">
 		<div class="upload-image">
 			<div class="image-container">
-				<img alt="Фото студента" id="image" />
+				<img alt="Фото студента" id="image">
 			</div>
-			<input type="file" id="image-file" onchange="setImage()" />
+			<input type="file" id="image-file" onchange="setImage()">
 		</div>
 
 		<div class="colors">
 			<div class="select-color">
 				<label for="background-color">Цвет фона</label>
-				<input type="color" id="background-color" value="white" oninput="setColor(event)"/>
+				<input type="color" id="background-color" value="white" oninput='setColor(event)'>
 			</div>
 			<div class="select-color">
 				<label for="foreground-color">Цвет текста</label>
-				<input type="color" id="foreground-color" oninput="setColor(event)" />
+				<input type="color" id="foreground-color">
 			</div>
 		</div>
-	</div>
 
+	</div>
 	<script src="forms_and_events.js"></script>
 </body>
 </html>

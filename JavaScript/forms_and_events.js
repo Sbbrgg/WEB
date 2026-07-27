@@ -19,37 +19,48 @@ function setImage() {
 	}
 	reader.readAsDataURL(filename.files[0]);
 }
+function setBackgroundColor(event) {
+	document.body.style.backgroundColor = event.target.value;
+	console.log(event.target.id);
+	//document.body.style.backgroundColor = document.getElementById("background-color").value;
+	/*let color = document.getElementById("background-color").value;
+	document.body.style.backgroundColor = color;
+	alert("setBackgroundColor");*/
+}
+function setForegroundColor() {
+	document.body.style.color = document.getElementById("foreground-color").value;
+}
 
-//function setBackgroundColor(e)
-//{
-//	document.body.style.backgroundColor = e.target.value;
-//	//document.body.style.backgroundColor = document.getElementById("background-color").value;
-//}
-//function setForegroundColor()
-//{
-//	document.body.style.color = document.getElementById("foreground-color").value;
-//}
+let colors = document.getElementById("foreground-color");
+colors.addEventListener("input", setColor);
 function setColor(event) {
-	//if (event.target.id === 'background-color') {
-	//	document.body.style.backgroundColor = event.target.value;
-	//}
-	//else
-	//	document.body.style.color = event.target.value;		
-	document.body.style[(event.target.id === 'background-color' ? 'background-color' : 'color')] = event.target.value
+	
+	document.body.style[(event.target.id === 'background-color' ? 'backgroundColor' : 'color')] = event.target.value;
+	//event.target.id === 'background-color' ? document.body.style.backgroundColor : document.body.style.color = event.target.value;
+	/*
+	if (event.target.id === 'background-color')
+		document.body.style.backgroundColor = event.target.value;
+	else
+		document.body.style.color = event.target.value;
+	*/
+	console.log(event.target.id);
+	//alert("setColor");
 }
 document.addEventListener("mousemove", traceMouse);
 function traceMouse(e) {
-	document.getElementById("mouse").innerHTML = `X= ${e.clientX}, Y = ${e.clientY}`;
+	document.getElementById("mouse").innerHTML =
+		`X = ${e.clientX}, Y = ${e.clientY}`;
 }
 
-document.getElementById("switch-background").addEventListener("click", switchBackground)
+document.getElementById("switch-background").addEventListener("click", switchBackground);
 function switchBackground(e) {
-
+	document.body.className = document.body.className === "dark" ? "light" : "dark";
+	/*
 	let skin = document.body.className;
-
 	let switchButton = document.getElementById("switch-background");
-	switchButton.src = skin === "dark" ? 'moon.png': 'sun.png';
-	document.body.className = skin === "dark" ? 'light': 'dark';
+	switchButton.src = skin === "dark" ? "moon.png" : "sun.png";
+	document.body.className = skin === "dark" ? "light" : "dark";
 	//document.getElementById("debug-background").innerHTML = switchButton.src;
 	document.getElementById("debug-background").innerHTML = document.body.className;
+	*/
 }
