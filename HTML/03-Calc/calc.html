@@ -1,5 +1,4 @@
-﻿﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -25,8 +24,8 @@
 				<div>&#8211 Калькулятор</div>
 			</div>
 			<div class="title-bar-right-side">
-				<button class="control-button">				<div class="control-button-signature" style="margin-left:-4px;">&#x1F5D5;</div></button>
-				<button class="control-button" disabled>	<div class="control-button-signature">&#128470;</div></button>
+				<button class="control-button">              <div class="control-button-signature" style="margin-left:-4px;">&#x1F5D5;</div></button>
+				<button class="control-button" disabled>    <div class="control-button-signature">&#128470;</div></button>
 				<button class="control-button close-button"><div class="control-button-signature close-button-signature ">&#10006; </div></button>
 			</div>
 		</div>
@@ -39,55 +38,48 @@
 					<button class="menu-button">Справка</button>
 				</div>
 				<div class="display-container">
-					<input type="text" class="display" />
+					<input type="text" class="display" id="display" readonly />
 				</div>
 				<!-- ---------------------------------------------------------- -->
 				<div class="calc-buttons">
-					<!--<div class="memory-buttons">
-						<div class="square"></div>
-						<button>MC</button>
-						<button>MR</button>
-						<button>MS</button>
-						<button>M+</button>
-					</div>-->
 					<div class="square"></div>
 					<div class="clear-buttons">
-						<button>Backspace</button>
-						<button>CE</button>
-						<button>C</button>
+						<button onclick="backspace()">Backspace</button>
+						<button onclick="clearCurrent()">CE</button>
+						<button onclick="clearAll()">C</button>
 					</div>
 					<!-- ---------------------------------------------------------- -->
-					<button class="memory-button">MC</button>
-					<button>7</button>
-					<button>8</button>
-					<button>9</button>
-					<button class="operation-button">/</button>
-					<button>sqrt</button>
+					<button class="memory-button" onclick="memoryClear()">MC</button>
+					<button onclick="inputDigit('7')">7</button>
+					<button onclick="inputDigit('8')">8</button>
+					<button onclick="inputDigit('9')">9</button>
+					<button onclick="inputOperator('/')">/</button>
+					<button onclick="squareRoot()">sqrt</button>
 					<!-- ---------------------------------------------------------- -->
-					<button class="memory-button">MR</button>
-					<button>4</button>
-					<button>5</button>
-					<button>6</button>
-					<button class="operation-button">*</button>
-					<button>%</button>
+					<button class="memory-button" onclick="memoryRecall()">MR</button>
+					<button onclick="inputDigit('4')">4</button>
+					<button onclick="inputDigit('5')">5</button>
+					<button onclick="inputDigit('6')">6</button>
+					<button onclick="inputOperator('*')">*</button>
+					<button onclick="percent()">%</button>
 					<!-- ---------------------------------------------------------- -->
-					<button class="memory-button">MS</button>
-					<button>1</button>
-					<button>2</button>
-					<button>3</button>
-					<button class="operation-button">-</button>
-					<button>1/x</button>
+					<button class="memory-button" onclick="memoryStore()">MS</button>
+					<button onclick="inputDigit('1')">1</button>
+					<button onclick="inputDigit('2')">2</button>
+					<button onclick="inputDigit('3')">3</button>
+					<button onclick="inputOperator('-')">-</button>
+					<button onclick="inverse()">1/x</button>
 					<!-- ---------------------------------------------------------- -->
-					<button class="memory-button">M+</button>
-					<button>0</button>
-					<button>+/-</button>
-					<button>.</button>
-					<button class="operation-button">+</button>
-					<button class="operation-button">=</button>
-
+					<button class="memory-button" onclick="memoryAdd()">M+</button>
+					<button onclick="inputDigit('0')">0</button>
+					<button onclick="changeSign()">+/-</button>
+					<button onclick="inputDigit('.')">.</button>
+					<button onclick="inputOperator('+')">+</button>
+					<button onclick="inputEquals()">=</button>
 				</div>
 			</div>
 		</div>
 	</div>
+    <script src="calc.js"></script>
 </body>
 </html>
