@@ -50,10 +50,10 @@
 
 /* /////////////////////////////////////////////////// */
 
-input, div, button {
+/*input, div, button {
 	font-size: 24px;
 	width: 50%;
-}
+}*/
 
 input {
 	text-align: right;
@@ -109,9 +109,46 @@ label {
 
 /* /////////////////////////////////////////////////////////////////////////// */
 
-#clock, #clock div {
+#clock/*, #clock div*/ {
 	font-family: 'Digital-7 Mono';
 	width: 98%;
 	font-size: 48px;
 	text-align: center;
+}
+#clock-controls {
+	font-size:22px;
+	align-self:center;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+
+#display{
+	display:flex;
+	justify-content:space-around;
+	margin:16px;
+	padding:16px;
+	border-radius:10px;
+	box-shadow:0px 0px 16px 4px gray;
+}
+
+.time-block{
+	border:solid 3px;
+	border-radius:10px;
+	width:148px;
+	box-shadow: 0px 0px 25px 5px gray;
+}
+.time-unit{
+	font-size: 48px;
+	color:rgb(200,0,0);
+	height:148px;
+	background-color:Highlight;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.time-marker{
+	border:solid 1px;
+	background-color: darkred;
+	color:aliceblue;
+	text-align:center;
 }
