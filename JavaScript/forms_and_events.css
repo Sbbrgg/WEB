@@ -1,5 +1,5 @@
 ﻿﻿body, #switch-background {
-	transition: color 10s, background-color 10s, background-image 10s;
+	transition: color 3s, background-color 3s, background-image 3s;
 }
 
 .header {
@@ -14,6 +14,7 @@
 	height: var(--bg-size);
 	padding: 0 calc(var(--bg-size)/5);
 	background-size: var(--bg-size) var(--bg-size);
+	background-repeat: no-repeat;
 }
 
 .dark {
@@ -34,6 +35,13 @@
 	.light #switch-background {
 		background-image: url("moon.png");
 	}
+
+/* /////////////////////////////////////////////////// */
+
+#switch-background-container, #switch-background-container > div {
+	display: flex;
+	padding: 0 8px;
+}
 
 /* /////////////////////////////////////////////////// */
 
@@ -92,4 +100,12 @@ label {
 	display: flex;
 	justify-content: space-between;
 	margin: 12px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+
+#clock, #clock div {
+	width: 98%;
+	font-size: 48px;
+	text-align: center;
 }

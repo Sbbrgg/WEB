@@ -34,7 +34,7 @@ function setForegroundColor() {
 let colors = document.getElementById("foreground-color");
 colors.addEventListener("input", setColor);
 function setColor(event) {
-	
+
 	document.body.style[(event.target.id === 'background-color' ? 'backgroundColor' : 'color')] = event.target.value;
 	//event.target.id === 'background-color' ? document.body.style.backgroundColor : document.body.style.color = event.target.value;
 	/*
@@ -54,6 +54,8 @@ function traceMouse(e) {
 
 document.getElementById("switch-background").addEventListener("click", switchBackground);
 function switchBackground(e) {
+	document.body.style.backgroundColor = '';
+	document.body.style.color = '';
 	document.body.className = document.body.className === "dark" ? "light" : "dark";
 	/*
 	let skin = document.body.className;
@@ -64,3 +66,46 @@ function switchBackground(e) {
 	document.getElementById("debug-background").innerHTML = document.body.className;
 	*/
 }
+document.getElementById("switch-background-delay").addEventListener("change", setDelay);
+function setDelay(e) {
+	let delay = e.target.value;
+	//alert(`Delay" ${delay}`);
+	document.getElementById('switch-background').style.transition =
+		document.body.style.transition =
+		`color ${delay}s, background-color ${delay}s, background-image ${delay}s`;
+	console.table(document.body.style);
+	console.table(document.getElementById('#switch-background').style);
+}
+/*
+const skinButton = document.getElementById('switch-background');
+skinButton.addEventListener('click', () =>
+{
+	if (skinButton)
+	{
+		document.body.style.backgroundColor = '';
+		document.body.style.color = '';
+	}
+	document.body.className = document.body.className === "dark" ? "light" : "dark";
+});
+*/
+
+/* ////////////////////////////////////////////////////////////////////// */
+function addLeadingZero(number) {
+	return number < 10 ? "0" + `${number}` : `${number}`;
+}
+function tickTimer() {
+	let date = new Date();
+	document.getElementById("raw-date").innerHTML = date.toString();
+
+	document.getElementById("hours").innerHTML = addLeadingZero(date.getHours());
+	document.getElementById("minutes").innerHTML = addLeadingZero(date.getMinutes());
+	document.getElementById("seconds").innerHTML = addLeadingZero(date.getSeconds());
+
+	document.getElementById("years").innerHTML = addLeadingZero(date.getFullYear());
+	document.getElementById("months").innerHTML = addLeadingZero(date.getMonth() + 1);
+	document.getElementById("days").innerHTML = addLeadingZero(date.getDate());
+
+
+	setTimeout(tickTimer, 100);
+}
+tickTimer();
